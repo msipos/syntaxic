@@ -1,0 +1,57 @@
+{
+  "root": {
+    "case_insensitive": true,
+    "illegal": "[<>]",
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "operator",
+        "end": ";",
+        "contains": [
+          {
+            "className": "string",
+            "begin": "'",
+            "end": "'"
+          },
+          {
+            "className": "string",
+            "begin": "\"",
+            "end": "\""
+          },
+          {
+            "className": "string",
+            "begin": "`",
+            "end": "`"
+          },
+          {
+            "className": "number",
+            "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+          },
+          {
+            "className": "comment",
+            "begin": "/\\*",
+            "end": "\\*/"
+          },
+          {
+            "className": "comment",
+            "begin": "--",
+            "end": "$"
+          }
+        ]
+      },
+      {
+        "className": "comment",
+        "begin": "/\\*",
+        "end": "\\*/"
+      },
+      {
+        "className": "comment",
+        "begin": "--",
+        "end": "$"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "keyword": "after and andalso|10 band begin bnot bor bsl bzr bxor case catch cond div end fun if let not of orelse|10 query receive rem try when xor",
+    "literal": "false true"
+  },
+  "root": {
+    "illegal": "(</|\\*=|\\+=|-=|/\\*|\\*/|\\(\\*|\\*\\))",
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "%",
+        "end": "$"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(\\d+#[a-fA-F0-9]+|\\d+(\\.\\d+)?([eE][-+]?\\d+)?)"
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n"
+      }
+    ]
+  }
+}

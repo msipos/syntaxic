@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "built_ins": "from maintainer cmd expose add copy entrypoint volume user workdir onbuild run env"
+  },
+  "root": {
+    "case_insensitive": true,
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$"
+      }
+    ]
+  }
+}

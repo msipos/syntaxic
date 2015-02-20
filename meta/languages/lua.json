@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "keyword": "and break do else elseif end false for if in local nil not or repeat return then true until while",
+    "built_in": "_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table"
+  },
+  "root": {
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "--(?!\\[=*\\[)",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "--\\[=*\\[",
+        "end": "\\]=*\\]"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      },
+      {
+        "className": "string",
+        "begin": "'",
+        "end": "'",
+        "illegal": "\\n"
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n"
+      },
+      {
+        "className": "string",
+        "begin": "\\[=*\\[",
+        "end": "\\]=*\\]",
+        "contains": [
+          {
+            "begin": "\\[=*\\[",
+            "end": "\\]=*\\]"
+          }
+        ]
+      }
+    ]
+  }
+}

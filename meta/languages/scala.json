@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "literal": "true false null",
+    "keyword": "type yield lazy override def with val var sealed abstract private trait object if forSome for while throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit"
+  },
+  "root": {
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "//",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "/\\*",
+        "end": "\\*/"
+      },
+      {
+        "className": "string",
+        "begin": "u?r?\"\"\"",
+        "end": "\"\"\""
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      }
+    ]
+  }
+}

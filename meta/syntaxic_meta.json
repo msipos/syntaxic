@@ -1,0 +1,360 @@
+{
+  "stat_lang": {
+    "languages": {
+
+"C/C++": {
+  "meta_file": "cpp",
+  "extensions": [".c", ".h", ".cpp", ".c++", ".h++", ".hpp", ".cc"]
+},
+"CMake": {
+  "meta_file": "cmake",
+  "extensions": [".cmake", ".cmake.in"
+  ]
+},
+"C#": {
+  "meta_file": "cs",
+  "extensions": [".cs", ".csharp"]
+},
+"CSS": {
+  "meta_file": "css",
+  "extensions": [".css"]
+},
+"Go": {
+  "meta_file": "go",
+  "extensions": [".go", ".golang"]
+},
+"HTML": {
+  "meta_file": "html",
+  "extensions": [".htm", ".html", ".xhtml"]
+},
+"Java": {
+  "meta_file": "java",
+  "extensions": [".java", ".jsp"]
+},
+"Javascript": {
+  "meta_file": "javascript",
+  "extensions": [".javascript", ".js"]
+},
+"JSON": {
+  "meta_file": "json",
+  "extensions": [".json"]
+},
+"Objective-C": {
+  "meta_file": "objectivec",
+  "extensions": [".objectivec", ".m", ".mm", ".objc", ".obj-c"]
+},
+"Perl": {
+  "meta_file": "perl",
+  "extensions": [".perl", ".pl"]
+},
+"PHP": {
+  "meta_file": "php",
+  "extensions": [".php", ".php3", ".php4", ".php5", ".php6"]
+},
+"Python": {
+  "meta_file": "python",
+  "extensions": [".python", ".py", ".gyp"]
+},
+"Ruby": {
+  "meta_file": "ruby",
+  "extensions": [".ruby", ".rb", ".gemspec", ".podspec", ".thor", ".irb"]
+},
+"SQL": {
+  "meta_file": "sql",
+  "extensions": [".sql"]
+},
+"Swift": {
+  "meta_file": "swift",
+  "extensions": [".swift"]
+},
+"Temp": {
+  "meta_file": "temp",
+  "extensions": []
+},
+"Bash": {
+  "meta_file": "bash",
+  "extensions": [
+    ".bash",
+    ".sh",
+    ".zsh"
+  ]
+},
+"Clojure": {
+  "meta_file": "clojure",
+  "extensions": [
+    ".clojure",
+    ".clj"
+  ]
+},
+"Coffeescript": {
+  "meta_file": "coffeescript",
+  "extensions": [
+    ".coffeescript",
+    ".coffee",
+    ".cson",
+    ".iced"
+  ]
+},
+"D": {
+  "meta_file": "d",
+  "extensions": [
+    ".d"
+  ]
+},
+"Dart": {
+  "meta_file": "dart",
+  "extensions": [
+    ".dart"
+  ]
+},
+"Delphi": {
+  "meta_file": "delphi",
+  "extensions": [
+    ".delphi"
+  ]
+},
+"Django": {
+  "meta_file": "django",
+  "extensions": [
+    ".django",
+    ".jinja"
+  ]
+},
+"Dockerfile": {
+  "meta_file": "dockerfile",
+  "extensions": [
+    ".dockerfile",
+    ".docker"
+  ]
+},
+"Elixir": {
+  "meta_file": "elixir",
+  "extensions": [
+    ".elixir"
+  ]
+},
+"Erlang": {
+  "meta_file": "erlang",
+  "extensions": [
+    ".erlang",
+    ".erl"
+  ]
+},
+"Fsharp": {
+  "meta_file": "fsharp",
+  "extensions": [
+    ".fsharp",
+    ".fs"
+  ]
+},
+"Glsl": {
+  "meta_file": "glsl",
+  "extensions": [
+    ".glsl"
+  ]
+},
+"Groovy": {
+  "meta_file": "groovy",
+  "extensions": [
+    ".groovy"
+  ]
+},
+"Haskell": {
+  "meta_file": "haskell",
+  "extensions": [
+    ".haskell",
+    ".hs"
+  ]
+},
+"Haxe": {
+  "meta_file": "haxe",
+  "extensions": [
+    ".haxe",
+    ".hx"
+  ]
+},
+"Julia": {
+  "meta_file": "julia",
+  "extensions": [
+    ".julia"
+  ]
+},
+"Less": {
+  "meta_file": "less",
+  "extensions": [
+    ".less"
+  ]
+},
+"Lisp": {
+  "meta_file": "lisp",
+  "extensions": [
+    ".lisp"
+  ]
+},
+"Lua": {
+  "meta_file": "lua",
+  "extensions": [
+    ".lua"
+  ]
+},
+"Makefile": {
+  "meta_file": "makefile",
+  "extensions": [
+    ".makefile",
+    ".mk",
+    ".mak"
+  ]
+},
+"Markdown": {
+  "meta_file": "markdown",
+  "extensions": [
+    ".markdown",
+    ".md",
+    ".mkdown",
+    ".mkd"
+  ]
+},
+"Mathematica": {
+  "meta_file": "mathematica",
+  "extensions": [
+    ".mathematica",
+    ".mma"
+  ]
+},
+"Matlab": {
+  "meta_file": "matlab",
+  "extensions": [
+    ".matlab"
+  ]
+},
+"Nginx": {
+  "meta_file": "nginx",
+  "extensions": [
+    ".nginx",
+    ".nginxconf"
+  ]
+},
+"Nim": {
+  "meta_file": "nim",
+  "extensions": [
+    ".nim"
+  ]
+},
+"Ocaml": {
+  "meta_file": "ocaml",
+  "extensions": [
+    ".ocaml",
+    ".ml"
+  ]
+},
+"Powershell": {
+  "meta_file": "powershell",
+  "extensions": [
+    ".powershell",
+    ".ps"
+  ]
+},
+"Processing": {
+  "meta_file": "processing",
+  "extensions": [
+    ".processing"
+  ]
+},
+"Protobuf": {
+  "meta_file": "protobuf",
+  "extensions": [
+    ".protobuf"
+  ]
+},
+"Puppet": {
+  "meta_file": "puppet",
+  "extensions": [
+    ".puppet",
+    ".pp"
+  ]
+},
+"R": {
+  "meta_file": "r",
+  "extensions": [
+    ".r"
+  ]
+},
+"Rust": {
+  "meta_file": "rust",
+  "extensions": [
+    ".rust",
+    ".rs"
+  ]
+},
+"Scala": {
+  "meta_file": "scala",
+  "extensions": [
+    ".scala"
+  ]
+},
+"Scheme": {
+  "meta_file": "scheme",
+  "extensions": [
+    ".scheme"
+  ]
+},
+"Smalltalk": {
+  "meta_file": "smalltalk",
+  "extensions": [
+    ".smalltalk",
+    ".st"
+  ]
+},
+"Tcl": {
+  "meta_file": "tcl",
+  "extensions": [
+    ".tcl",
+    ".tk"
+  ]
+},
+"Tex": {
+  "meta_file": "tex",
+  "extensions": [
+    ".tex"
+  ]
+},
+"Vbnet": {
+  "meta_file": "vbnet",
+  "extensions": [
+    ".vbnet",
+    ".vb"
+  ]
+},
+"Verilog": {
+  "meta_file": "verilog",
+  "extensions": [
+    ".verilog",
+    ".v"
+  ]
+},
+"Vhdl": {
+  "meta_file": "vhdl",
+  "extensions": [
+    ".vhdl"
+  ]
+},
+"X86asm": {
+  "meta_file": "x86asm",
+  "extensions": [
+    ".x86asm"
+  ]
+},
+"Xml": {
+  "meta_file": "xml",
+  "extensions": [
+    ".xml",
+    ".rss",
+    ".atom",
+    ".xsl",
+    ".plist"
+  ]
+}
+
+    }
+  }
+}

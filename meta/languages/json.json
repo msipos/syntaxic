@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "literal": "true false null"
+  },
+  "syntax": {
+    "pairs": [
+      { "open": 1, "close": 2 },
+      { "open": 3, "close": 4 }
+    ]
+  },
+  "root": {
+    "contains": [
+      { "className": "operator", "begin": "\\{", "extra": 1 },
+      { "className": "operator", "begin": "\\}", "extra": 2 },
+      { "className": "operator", "begin": "\\[", "extra": 3 },
+      { "className": "operator", "begin": "\\]", "extra": 4 },
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      }
+    ]
+  }
+}

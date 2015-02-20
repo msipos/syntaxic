@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "keyword": "addr and as asm bind block break|0 case|0 cast const|0 continue|0 converter discard distinct|10 div do elif else|0 end|0 enum|0 except export finally for from generic if|0 import|0 in include|0 interface is isnot|10 iterator|10 let|0 macro method|10 mixin mod nil not notin|10 object|0 of or out proc|10 ptr raise ref|10 return shl shr static template|10 try|0 tuple type|0 using|0 var|0 when while|0 with without xor yield",
+    "literal": "shared guarded stdin stdout stderr result|10 true false"
+  },
+  "root": {
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "string",
+        "begin": "[a-zA-Z]\\w*\"",
+        "end": "\"",
+        "contains": [
+          {
+            "begin": "\"\""
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "([a-zA-Z]\\w*)?\"\"\"",
+        "end": "\"\"\""
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\."
+          }
+        ]
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][0-9a-fA-F][_0-9a-fA-F]*)('?[iIuU](8|16|32|64))?"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0o[0-7][_0-7]*)('?[iIuUfF](8|16|32|64))?"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0(b|B)[01][_01]*)('?[iIuUfF](8|16|32|64))?"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(\\d[_\\d]*)('?[iIuUfF](8|16|32|64))?"
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$"
+      }
+    ]
+  }
+}

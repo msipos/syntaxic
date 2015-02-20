@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "keywords": "abstract as base bool break byte case catch char checked const continue decimal default delegate do double else enum event explicit extern false finally fixed float for foreach goto if implicit in int interface internal is lock long null object operator out override params private protected public readonly ref sbyte sealed short sizeof stackalloc static string struct switch this true try typeof uint ulong unchecked unsafe ushort using virtual volatile void while async protected public private internal ascending descending from get group into join let orderby partial select set value var where yield"
+  },
+  "syntax": {
+    "pairs": [
+      { "open": 1, "close": 2 },
+      { "open": 3, "close": 4 },
+      { "open": 5, "close": 6 }
+    ],
+    "single_line_comment": "//"
+  },
+  "root": {
+    "illegal": "::",
+    "contains": [
+      { "className": "operator", "begin": "\\{", "extra": 1 },
+      { "className": "operator", "begin": "\\}", "extra": 2 },
+      { "className": "operator", "begin": "\\(", "extra": 3 },
+      { "className": "operator", "begin": "\\)", "extra": 4 },
+      { "className": "operator", "begin": "\\[", "extra": 5 },
+      { "className": "operator", "begin": "\\]", "extra": 6 },
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "///",
+        "end": "$",
+        "contains": []
+      },
+      {
+        "className": "comment",
+        "begin": "//",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "/\\*",
+        "end": "\\*/"
+      },
+      {
+        "className": "preprocessor",
+        "begin": "#",
+        "end": "$"
+      },
+      {
+        "className": "string",
+        "begin": "@\"",
+        "end": "\"",
+        "contains": [
+          {
+            "begin": "\"\""
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "'",
+        "end": "'",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      }
+    ]
+  }
+}

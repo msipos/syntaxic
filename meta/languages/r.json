@@ -1,0 +1,55 @@
+{
+  "root": {
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$"
+      },
+      {
+        "className": "number",
+        "begin": "0[xX][0-9a-fA-F]+[Li]?\\b"
+      },
+      {
+        "className": "number",
+        "begin": "\\d+(?:[eE][+\\-]?\\d*)?L\\b"
+      },
+      {
+        "className": "number",
+        "begin": "\\d+\\.(?!\\d)(?:i\\b)?"
+      },
+      {
+        "className": "number",
+        "begin": "\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b"
+      },
+      {
+        "className": "number",
+        "begin": "\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "\"",
+        "end": "\""
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "'",
+        "end": "'"
+      }
+    ]
+  }
+}

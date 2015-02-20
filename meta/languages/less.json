@@ -1,0 +1,22 @@
+{
+  "root": {
+    "case_insensitive": true,
+    "illegal": "[=>'/<($\"]",
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "//",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "/\\*",
+        "end": "\\*/"
+      }
+    ]
+  }
+}

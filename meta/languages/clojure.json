@@ -1,0 +1,35 @@
+{
+  "root": {
+    "illegal": "\\S",
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": null
+      },
+      {
+        "className": "comment",
+        "begin": "\\^[a-zA-Z_\\-!.?+*=<>&#'][a-zA-Z_\\-!.?+*=<>&#'0-9/;:]*"
+      },
+      {
+        "className": "comment",
+        "begin": "\\^\\{",
+        "end": "\\}"
+      },
+      {
+        "className": "comment",
+        "begin": ";",
+        "end": "$"
+      },
+      {
+        "className": "number",
+        "begin": "[-+]?\\d+(\\.\\d+)?"
+      }
+    ]
+  }
+}

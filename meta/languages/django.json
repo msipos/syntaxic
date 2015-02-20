@@ -1,0 +1,23 @@
+{
+  "root": {
+    "case_insensitive": true,
+    "subLanguage": "xml",
+    "subLanguageMode": "continuous",
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "\\{%\\s*comment\\s*%}",
+        "end": "\\{%\\s*endcomment\\s*%}"
+      },
+      {
+        "className": "comment",
+        "begin": "\\{#",
+        "end": "#}"
+      }
+    ]
+  }
+}

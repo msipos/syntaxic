@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "keywords": "and false then def defined module in return redo if BEGIN retry end for true self when next until do begin unless END rescue nil else break undef not super class case require yield alias while ensure elsif or include attr_reader attr_writer attr_accessor"
+  },
+  "syntax": {
+    "pairs": [
+      { "open": 1, "close": 2 },
+      { "open": 3, "close": 4 },
+      { "open": 5, "close": 6 }
+    ],
+    "single_line_comment": "#"
+  },
+  "root": {
+    "contains": [
+      { "className": "operator", "begin": "\\{", "extra": 1 },
+      { "className": "operator", "begin": "\\}", "extra": 2 },
+      { "className": "operator", "begin": "\\(", "extra": 3 },
+      { "className": "operator", "begin": "\\)", "extra": 4 },
+      { "className": "operator", "begin": "\\[", "extra": 5 },
+      { "className": "operator", "begin": "\\]", "extra": 6 },
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "number",
+        "begin": "(\\b0[0-7_]+)|(\\b0x[0-9a-fA-F_]+)|(\\b[1-9][0-9_]*(\\.[0-9_]+)?)|[0_]\\b"
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$",
+        "contains": []
+      },
+      {
+        "className": "comment",
+        "begin": "^\\=begin",
+        "end": "^\\=end",
+        "contains": []
+      },
+      {
+        "className": "comment",
+        "begin": "^__END__",
+        "end": "\\n$"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "'",
+        "end": "'"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "\"",
+        "end": "\""
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "`",
+        "end": "`"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?\\(",
+        "end": "\\)"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?\\[",
+        "end": "\\]"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?{",
+        "end": "}"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?<",
+        "end": ">"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?/",
+        "end": "/"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?%",
+        "end": "%"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?-",
+        "end": "-"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "%[qQwWx]?\\|",
+        "end": "\\|"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "\\B\\?(\\\\\\d{1,3}|\\\\x[A-Fa-f0-9]{1,2}|\\\\u[A-Fa-f0-9]{4}|\\\\?\\S)\\b"
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$",
+        "contains": []
+      },
+      {
+        "className": "comment",
+        "begin": "^\\=begin",
+        "end": "^\\=end",
+        "contains": []
+      },
+      {
+        "className": "comment",
+        "begin": "^__END__",
+        "end": "\\n$"
+      }
+    ]
+  }
+}

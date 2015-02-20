@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "keyword": "assert break case catch class const continue default do else enum extends false final finally for if in is new null rethrow return super switch this throw true try var void while with",
+    "literal": "abstract as dynamic export external factory get implements import library operator part set static typedef",
+    "built_in": "print Comparable DateTime Duration Function Iterable Iterator List Map Match Null Object Pattern RegExp Set Stopwatch String StringBuffer StringSink Symbol Type Uri bool double int num document window querySelector querySelectorAll Element ElementList"
+  },
+  "root": {
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "//",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "/\\*",
+        "end": "\\*/"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      },
+      {
+        "className": "string",
+        "begin": "r'''",
+        "end": "'''"
+      },
+      {
+        "className": "string",
+        "begin": "r\"\"\"",
+        "end": "\"\"\""
+      },
+      {
+        "className": "string",
+        "begin": "r'",
+        "end": "'",
+        "illegal": "\\n"
+      },
+      {
+        "className": "string",
+        "begin": "r\"",
+        "end": "\"",
+        "illegal": "\\n"
+      },
+      {
+        "className": "string",
+        "begin": "'''",
+        "end": "'''",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "\"\"\"",
+        "end": "\"\"\"",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "'",
+        "end": "'",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      }
+    ]
+  }
+}

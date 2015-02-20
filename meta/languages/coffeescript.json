@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "keyword": "in if for while finally new do return else break catch instanceof throw try this switch continue typeof delete debugger super then unless until loop of by when and or is isnt not",
+    "literal": "true false null undefined yes no on off",
+    "reserved": "case default function var void with const let enum export import native __hasProp __extends __slice __bind __indexOf",
+    "built_in": "npm require console print module global window document"
+  },
+  "root": {
+    "illegal": "\\/\\*",
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0b[01]+)"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+        "starts": {
+          "end": "(\\s*/)?",
+          "relevance": 0
+        }
+      },
+      {
+        "className": "comment",
+        "begin": "###",
+        "end": "###",
+        "contains": []
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$"
+      },
+      {
+        "className": "regexp",
+        "begin": "///",
+        "end": "///",
+        "contains": [
+          {
+            "className": "comment",
+            "begin": "#",
+            "end": "$"
+          }
+        ]
+      },
+      {
+        "className": "regexp",
+        "begin": "//[gim]*"
+      },
+      {
+        "className": "regexp",
+        "begin": "\\/(?![ *])(\\\\\\/|.)*?\\/[gim]*(?=\\W|$)"
+      },
+      {
+        "className": "string",
+        "begin": "'''",
+        "end": "'''",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "'",
+        "end": "'",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "\"\"\"",
+        "end": "\"\"\"",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      }
+    ]
+  }
+}

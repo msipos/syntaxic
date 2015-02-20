@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "keywords": "and include_once list abstract global private echo interface as static endswitch array null if endwhile or const for endforeach self var while isset public protected exit foreach throw elseif include __FILE__ empty require_once do xor return parent clone use __CLASS__ __LINE__ else break print eval new catch __METHOD__ case exception default die require __FUNCTION__ enddeclare final try switch continue endfor endif declare unset true false trait goto instanceof insteadof __DIR__ __NAMESPACE__ yield finally"
+  },
+  "root": {
+    "case_insensitive": true,
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "//",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "#",
+        "end": "$"
+      },
+      {
+        "className": "comment",
+        "begin": "/\\*",
+        "end": "\\*/",
+        "contains": [
+          {
+            "className": "preprocessor",
+            "begin": "<\\?(php)?|\\?>"
+          }
+        ]
+      },
+      {
+        "className": "comment",
+        "begin": "__halt_compiler.+?;"
+      },
+      {
+        "className": "string",
+        "begin": "<<<['\"]?\\w+['\"]?$",
+        "end": "^\\w+;",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "preprocessor",
+        "begin": "<\\?(php)?|\\?>"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0b[01]+)"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          },
+          {
+            "className": "preprocessor",
+            "begin": "<\\?(php)?|\\?>"
+          }
+        ],
+        "begin": "b\"",
+        "end": "\""
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          },
+          {
+            "className": "preprocessor",
+            "begin": "<\\?(php)?|\\?>"
+          }
+        ],
+        "begin": "b'",
+        "end": "'"
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "'",
+        "end": "'",
+        "illegal": null
+      },
+      {
+        "className": "string",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ],
+        "begin": "\"",
+        "end": "\"",
+        "illegal": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "syntax": {
+    "pairs": [
+      { "open": 1, "close": 2 }
+    ]
+  },
+  "root": {
+    "case_insensitive": true,
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "<!--",
+        "end": "-->"
+      },
+      { "className": "operator", "begin": "\\<", "extra": 1 },
+      { "className": "operator", "begin": "\\>", "extra": 2 },
+      {
+        "className": "string",
+        "begin": "\"",
+        "end": "\"",
+        "illegal": "\\n",
+        "contains": [
+          {
+            "begin": "\\\\[\\s\\S]"
+          }
+        ]
+      },
+      {
+        "className": "number",
+        "begin": "\\b(\\d+(\\.\\d*)?|\\.\\d+)"
+      }
+    ]
+  }
+}

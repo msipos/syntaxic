@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "keywords": "self super nil true false thisContext"
+  },
+  "root": {
+    "contains": [
+      {
+        "className": "ident",
+        "begin": "[a-zA-Z_]\\w*"
+      },
+      {
+        "className": "comment",
+        "begin": "\"",
+        "end": "\""
+      },
+      {
+        "className": "string",
+        "begin": "'",
+        "end": "'",
+        "illegal": "\\n"
+      },
+      {
+        "className": "number",
+        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+      }
+    ]
+  }
+}
