@@ -30,8 +30,13 @@
         ]
       },
       {
+        "className": "comment",
+        "begin": "//",
+        "end": "$"
+      },
+      {
         "className": "number",
-        "begin": "\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)"
+        "begin": "\\b(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?"
       }
     ]
   }
