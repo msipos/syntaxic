@@ -1,0 +1,49 @@
+// Every color is "RRGGBBAA"
+// Font is 0 (normal), 1 (bold) or 2 (italic)
+{
+  // Each row is [text_color, text_color_when_selected, font]
+  "syntax": [
+    // None
+    ["000000FF", "FFFFFFFF", 0],
+    // Identifier
+    ["800000FF", "FFFFFFFF", 0],
+    // Keyword
+    ["000000FF", "FFFFFFFF", 1],
+    // Other keyword (e.g. builtin function, type)
+    ["800000FF", "FFFFFFFF", 0],
+    // Operator
+    ["000000FF", "FFFFFFFF", 0],
+    // Preprocessor
+    ["800000FF", "FFFFFFFF", 1],
+    // Important identifier (e.g. class name) - Not used right now
+    ["000000FF", "FFFFFFFF", 0],
+    // String
+    ["008000FF", "FFFFFFFF", 0],
+    // Number
+    ["000080FF", "FFFFFFFF", 0],
+    // Comment
+    ["808080FF", "FFFFFFFF", 2],
+    // Error token
+    ["A00000FF", "FFFFFFFF", 0],
+    // For future use
+    ["FFFFFFFF", "FFFFFFFF", 0],
+    // For future use
+    ["FFFFFFFF", "FFFFFFFF", 0],
+    // For future use
+    ["FFFFFFFF", "FFFFFFFF", 0],
+    // For future use
+    ["FFFFFFFF", "FFFFFFFF", 0],
+    // For future use
+    ["FFFFFFFF", "FFFFFFFF", 0]
+  ],
+  "cursor_color": "000000FF",
+  "bg_color": "F0F0F0FF",
+  "ruler_color": "EAEAEAFF",
+  "cursor_highlight_bg_color": "E4E4E4FF",
+  "selected_bg_color": "0090FFFF",
+  "highlight_bg_color": "40A0F0FF",
+  "overlay_line_color": "C03030FF",
+  "overlay_text_color": "FF5050FF",
+  "gutter_bg_color": "DDDDDDFF",
+  "gutter_text_color": "222222FF"
+}
