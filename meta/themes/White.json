@@ -42,6 +42,7 @@
   "cursor_highlight_bg_color": "E4E4E4FF",
   "selected_bg_color": "0090FFFF",
   "highlight_bg_color": "90E0FFFF",
+  "highlight_text_color": "FFFFFFFF",
   "overlay_line_color": "C03030FF",
   "overlay_text_color": "FF5050FF",
   "gutter_bg_color": "DDDDDDFF",
