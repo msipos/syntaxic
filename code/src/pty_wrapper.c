@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/ioctl.h>
 #include <termios.h>
 #include <unistd.h>
 
@@ -78,6 +79,16 @@ PTYData fork_with_pty() {
     dup(slave_fd);
     dup(slave_fd);
     dup(slave_fd);
+
+    // No need for slave FD:
+    close(slave_fd);
+
+    // Make the current process a new session leader
+    setsid();
+
+    // As the child is a session leader, set the controlling terminal to be the slave side of the PTY
+    // (Mandatory for programs like the shell to make them manage correctly their outputs)
+    ioctl(0, TIOCSCTTY, 1);
   }
 
   pty_data.failed = 0;
