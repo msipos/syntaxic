@@ -73,6 +73,10 @@
             "className": "comment",
             "begin": "//",
             "end": "$"
+          },
+          {
+            "begin": "\\\\$",
+            "escape_line_end": true
           }
         ]
       }
