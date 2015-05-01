@@ -75,7 +75,9 @@
   "globs": [
     "*.bash",
     "*.sh",
-    "*.zsh"
+    "*.zsh",
+    "*.conf",
+    "*.cfg"
   ]
 },
 "Clojure": {
@@ -357,5 +359,5 @@
 
     }
   },
-  "themes": ["Blue", "White"]
+  "themes": ["Blue", "Shell", "White"]
 }
