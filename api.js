@@ -4,17 +4,71 @@
 // Note, all document references are held on Javascript side through _handles_, which are Javascript integers.  This reduces the chance of the program crashing through the Javascript references outliving the documents on the C++ side.
 //
 var Syn = {
+  // Add overlay (floating message) to a document.
+  //
+  // Arguments:
+  //   docId (integer) - Document handle.
+  //   row (integer) - Row.
+  //   col (integer) - Column.
+  //   type (integer) - Type (must be 1 for now).
+  //   text (string) - Text of the overlay.
+  //
+  // Return value: none
+  //
+  // Availability: 0.9.2
+  addOverlay: function(docId, row, col, type, text) {},
+
   // Add menu item under plugins/.
   //
   // Arguments:
   //   text (string) - Menu item title
-  //   shortcut (string) - Menu shortcut, string such as "Ctrl+J"
+  //   shortcut (string) - Menu shortcut, string such as "Ctrl+J", empty for no shortcut
   //   action (function) - Javascript function to execute
   //
   // Return value: none
   //
   // Availability: 0.9.2
   addPluginMenuItem: function(text, shortcut, action) {},
+
+  // Clear all overlays.
+  //
+  // Arguments:
+  //   docId (integer) - Document handle.
+  //
+  // Return value: none
+  //
+  // Availability: 0.9.2
+  clearOverlays: function(docId) {},
+
+  // Clear plugins/ menu. You probably want to call this at the top of your syntaxic.js
+  //
+  // Arguments: none
+  //
+  // Return value: none
+  //
+  // Availability: 0.9.2
+  clearPluginMenu: function() {},
+
+  // Enter a character into a document (as if the user did).  Note: use ch=13 (carriage return) for newline.
+  //
+  // Arguments:
+  //   ch (int) - Character to enter (ASCII/unicode)
+  //
+  // Return value: none
+  //
+  // Availability: 0.9.2
+  docChar: function(docId, ch) {},
+
+  // Paste text into a document (as if the user did).
+  //
+  // Arguments:
+  //   docId (integer) - Document handle.
+  //   text (string) - Text to paste
+  //
+  // Return value: none
+  //
+  // Availability: 0.9.2
+  docPaste: function(docId, text) {},
 
   // Fade in a message in the corner of the editor window.
   //
@@ -55,25 +109,52 @@ var Syn = {
   // Availability: 0.9.2
   getDocSelectedText: function(docId) {},
 
-  // Replace document selected text.  If no selection in doc, no action is performed.
+  // Get document entire text.
   //
   // Arguments:
   //   docId (integer) - Document handle.
-  //   newText (string) - New text.
   //
-  // Return value: none
+  // Return value: (string) entire document as a string.
   //
   // Availability: 0.9.2
-  replaceDocSelectedText: function(docId, newText) {},
+  getDocText: function(docId) {},
 
-  // Write text into a document, as if a user did.  (This is useful to write a command into the shell.)
+  // Go to this location in the file
   //
   // Arguments:
   //   docId (integer) - Document handle.
-  //   text (string) - Text to write
+  //   row (integer) - Row.
+  //   col (integer) - Column.
   //
   // Return value: none
   //
   // Availability: 0.9.2
-  writeIntoDoc: function(docId, text) {},
+  goTo: function(docId, row, col) {},
+
+  // Prompt the user to enter text.
+  //
+  // Arguments:
+  //   title (string) - Dialog box title
+  //   text (string) - Dialog box text
+  //   defaultText (string) - Default text already entered.
+  //
+  // Return value: none
+  //
+  // Availability: 0.9.2
+  promptText: function(title, text, defaultText) {},
+
+  // Synchronously execute an external command.
+  //
+  // Arguments:
+  //   obj (object) - Object with following keys:
+  //     command (string) - Required.  Command to execute.
+  //     stdin (string) - Optional.  If supplied, stdin will be piped into the external process.
+  //
+  // Return value: object with keys:
+  //     exitCode (integer)
+  //     stdout (string)
+  //     stderr (string)
+  //
+  // Availability: 0.9.2
+  system: function(docId, row, col) {},
 };
