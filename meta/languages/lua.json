@@ -1,6 +1,6 @@
 {
   "meta": {
-    "keyword": "and break do else elseif end false for if in local nil not or repeat return then true until while",
+    "keyword": "and break do else elseif end false for function if in local nil not or repeat return then true until while",
     "built_in": "_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table"
   },
   "root": {
@@ -11,7 +11,7 @@
       },
       {
         "className": "comment",
-        "begin": "--(?!\\[=*\\[)",
+        "begin": "--",
         "end": "$"
       },
       {
