@@ -1,0 +1,43 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+  <file>resources/icon.png</file>
+  <file>resources/file_icon.png</file>
+  <file>resources/dir_icon.png</file>
+  <file>resources/project_icon.png</file>
+  <file>resources/navmode.png</file>
+  <file>resources/up.png</file>
+  <file>resources/down.png</file>
+  <file alias="qt/etc/qt.conf">resources/qt.conf</file>
+
+  <file>resources/syntaxic.js</file>
+
+  <file>resources/rc/up_arrow_disabled.png</file>
+  <file>resources/rc/Hmovetoolbar.png</file>
+  <file>resources/rc/stylesheet-branch-end.png</file>
+  <file>resources/rc/branch_closed-on.png</file>
+  <file>resources/rc/stylesheet-vline.png</file>
+  <file>resources/rc/branch_closed.png</file>
+  <file>resources/rc/branch_open-on.png</file>
+  <file>resources/rc/transparent.png</file>
+  <file>resources/rc/right_arrow_disabled.png</file>
+  <file>resources/rc/sizegrip.png</file>
+  <file>resources/rc/close.png</file>
+  <file>resources/rc/down_arrow.png</file>
+  <file>resources/rc/Vmovetoolbar.png</file>
+  <file>resources/rc/left_arrow.png</file>
+  <file>resources/rc/stylesheet-branch-more.png</file>
+  <file>resources/rc/up_arrow.png</file>
+  <file>resources/rc/right_arrow.png</file>
+  <file>resources/rc/left_arrow_disabled.png</file>
+  <file>resources/rc/Hsepartoolbar.png</file>
+  <file>resources/rc/checkbox.png</file>
+  <file>resources/rc/checkbox_indeterminate.png</file>
+  <file>resources/rc/branch_open.png</file>
+  <file>resources/rc/Vsepartoolbar.png</file>
+  <file>resources/rc/down_arrow_disabled.png</file>
+  <file>resources/rc/undock.png</file>
+
+  <file>resources/style.qss</file>
+</qresource>
+</RCC>

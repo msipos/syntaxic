@@ -24,6 +24,7 @@ var Syn = {
   //   type (string) - Type of an event to register for. Possibilities for now are:
   //     * 'after_save'
   //     * 'before_save'
+  //     * 'newline'
   //   callback (function) - Callback to register.  Signature:
   //     function callback(docId) {}
   //
@@ -199,7 +200,8 @@ var Syn = {
   //   docId (integer) - Document handle.
   //
   // Return value: (object or null).  Null in case there is no selection.  Object of the form
-  // {'start_row': integer, 'start_col': integer, 'end_row': integer, 'end_col': integer} otherwise.
+  // {'start_row': integer, 'start_col': integer, 'end_row': integer, 'end_col': integer,
+  //  'lines_start': integer, 'lines_end': integer} otherwise.
   //
   // Availability: 0.9.3
   getDocSelection: function(docId) {},
@@ -234,7 +236,7 @@ var Syn = {
   //
   // Return value: none
   //
-  // Availability: 0.9.2
+  // Availability: 0.9.2, deprecated 0.9.3, use docMove instead.
   goTo: function(docId, row, col) {},
 
   // Read a file and return as text.  This uses Syntaxic IO abstractions and will work over SSH as well.
@@ -264,7 +266,7 @@ var Syn = {
   // Return value: (string) Path of a temp file that can be written to.
   //
   // Availability: 0.9.3
-  ioTempFile: function(path) {},
+  ioTempFile: function() {},
 
   // Write a file (overwrite if exists).  This uses Syntaxic IO abstractions and will work over SSH as well.
   //

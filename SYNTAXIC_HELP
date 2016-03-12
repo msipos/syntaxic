@@ -1,0 +1,108 @@
+                           Syntaxic Help
+                           =============
+
+
+        Problems, bugs, comments and feature requests
+        ---------------------------------------------
+
+    Please report them to support@kpartite.com .
+
+
+        Basic Editing and Navigation
+        ----------------------------
+
+  CTRL+Left CTRL+Right
+    Skip to next word (left or right).
+
+  CTRL+Up CTRL+Down
+    Skip to next paragraph (up or down).  Paragraphs are separated by empty lines.
+
+  CTRL+A CTRL+E
+    Aliases for home (go to beginning of line) and end (go to end of line).
+
+  CTRL+D
+    Alias for delete forwards.
+
+
+        Find and replace
+        ----------------
+
+    Once you are in the find/replace dialog you may use these keyboard shortcuts.
+
+  CTRL+F  (Mac OSX:  CMD+F)
+    Find next.
+  CTRL+G  (Mac OSX:  CMD+G)
+    Find previous.
+  CTRL+R  (Mac OSX:  CMD+R)
+    Replace this instance.
+  CTRL+SHIFT+R  (Mac OSX:  CMD+SHIFT+R)
+    Replace all.
+
+
+        Navigation mode
+        ---------------
+
+    Pressing CTRL+G (Mac OSX: CMD+G) toggles the navigation mode.  Navigation mode is illustrated
+  by a different cursor shape and rapid blinking.  In navigation mode, the following keyboard
+  shortcuts apply:
+
+  H  J  K  L
+    Move left, down, up, right respectively.
+  U
+    Page up.
+  M
+    Page down.
+  O  P
+    Tab left, tab right.
+  G  ;
+    Skip word left, skip word right.
+
+
+        Invoking external commands and the temporary buffer
+        ---------------------------------------------------
+
+    Pressing CTRL+I (Mac OSX: CMD+I) opens the invoke dialog.  Type in a shell command into the
+  invoke dialog to execute it in a subprocess shell (bash on Linux and Mac OSX, cmd.exe on Windows).
+
+  To jump to the console of the running process, press CTRL+T (Mac OSX: CMD+T).
+
+  Pressing CTRL+T (Mac OSX: CMD+T) again returns you to your previous location.
+
+  Only one external process may run at a time.
+
+  CTRL+Up  CTRL+Down
+    In the temporary buffer, these skip to next file mentions.
+
+  Return
+    Pressing "return" on a file mention in the temp buffer will attempt to locate that file and
+    jump there.
+
+
+        Bookmarking
+        -----------
+
+  CTRL+SHIFT+B  (Mac OSX: CMD+SHIFT+B)
+    Adds a new bookmark to the beginning of the round-robin list of bookmarks.
+
+  CTRL+B  (Mac OSX: CMD+B)
+    Jumps to the last placed bookmark.  If you immediately press CTRL+B again, you will jump to the
+    next latest bookmark, and so on, in round-robin fashion.
+
+        Folding
+        -------
+
+  CTRL+L  (Mac OSX: CMD+L)
+    Folds the entire file.
+
+  CTRL+SHIFT+L  (Mac OSX: CMD+SHIFT+L)
+    Unfolds the entire file.
+
+  CTRL+Up or CTRL+Down  (Mac OSX: CMD+Up or CMD+Down)
+    Unfolds regions.
+
+        Jumping to files
+        ----------------
+
+    Jump-to-file dialog is populated by files visited in the file browser sidebar.  To add files to
+  the jump-to-file dialog, first visit them in the sidebar.  In project mode, only project files
+  will be available in the jump-to-file dialog.

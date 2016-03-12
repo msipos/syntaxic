@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/max/repos/syntaxic-os/code/src/local_edit.c
+errno.h
+-
+stdio.h
+-
+pty_wrapper.h
+/home/max/repos/syntaxic-os/code/src/pty_wrapper.h
+signal.h
+-
+sys/select.h
+-
+sys/wait.h
+-
+unistd.h
+-
+
+/home/max/repos/syntaxic-os/code/src/pty_wrapper.c
+pty_wrapper.h
+/home/max/repos/syntaxic-os/code/src/pty_wrapper.h
+errno.h
+-
+fcntl.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/ioctl.h
+-
+termios.h
+-
+unistd.h
+-
+
+/home/max/repos/syntaxic-os/code/src/pty_wrapper.h
+

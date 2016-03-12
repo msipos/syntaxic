@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>English</string>
+  <key>CFBundleExecutable</key>
+  <string>Syntaxic</string>
+  <key>CFBundleGetInfoString</key>
+  <string></string>
+  <key>CFBundleIconFile</key>
+  <string>icon.icns</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.kpartite.Syntaxic</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>Syntaxic</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>0.9.3</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>0.9.3</string>
+  <key>LSRequiresCarbon</key>
+  <true/>
+  <key>NSHumanReadableCopyright</key>
+  <string></string>
+  <key>NSPrincipalClass</key>
+  <string>NSApplication</string>
+  <key>NSHighResolutionCapable</key>
+  <string>True</string>
+  <key>CFBundleDocumentTypes</key>
+    <array>
+    <dict>
+        <key>CFBundleTypeExtensions</key>
+            <array>
+            <string>*</string>
+            </array>
+        <key>CFBundleTypeMIMETypes</key>
+            <array>
+            <string>*/*</string>
+            </array>
+        <key>CFBundleTypeName</key>
+            <string>any</string>
+        <key>CFBundleTypeRole</key>
+            <string>Viewer</string>
+        <key>LSTypeIsPackage</key>
+            <false/>
+    </dict>
+    </array>
+</dict>
+</plist>

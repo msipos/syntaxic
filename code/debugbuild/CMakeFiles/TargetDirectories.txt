@@ -1,0 +1,2 @@
+/home/max/repos/syntaxic-os/code/debugbuild/CMakeFiles/syntaxic_local_wrapper.dir
+/home/max/repos/syntaxic-os/code/debugbuild/CMakeFiles/syntaxic_remote_editor.dir

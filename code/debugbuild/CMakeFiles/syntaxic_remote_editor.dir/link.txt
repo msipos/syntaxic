@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99    CMakeFiles/syntaxic_remote_editor.dir/src/remote_edit.c.o CMakeFiles/syntaxic_remote_editor.dir/src/pty_wrapper.c.o  -o syntaxic_remote_editor -rdynamic 

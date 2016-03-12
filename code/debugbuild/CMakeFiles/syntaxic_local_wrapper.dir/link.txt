@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=c99    CMakeFiles/syntaxic_local_wrapper.dir/src/local_edit.c.o CMakeFiles/syntaxic_local_wrapper.dir/src/pty_wrapper.c.o  -o syntaxic_local_wrapper -rdynamic 

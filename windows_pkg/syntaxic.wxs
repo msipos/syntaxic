@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+   <Product Id="*" UpgradeCode="cae3c78d-cdb8-4558-933d-604287293a83" Name="Syntaxic 0.9.3" Version="0.9.3.0" Manufacturer="K-partite LLC" Language="1033">
+      <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
+      <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
+      <Property Id="PREVIOUSVERSIONSINSTALLED" Secure="yes" />
+      <Upgrade Id="cae3c78d-cdb8-4558-933d-604287293a83">
+        <UpgradeVersion Minimum="0.0.0.1" Maximum="99.0.0.0" Property="PREVIOUSVERSIONSINSTALLED" IncludeMinimum="yes" IncludeMaximum="no" />
+      </Upgrade>
+
+      <InstallExecuteSequence>
+        <RemoveExistingProducts Before="InstallInitialize" />
+      </InstallExecuteSequence>
+
+      <WixVariable Id="WixUILicenseRtf" Value="SYNTAXIC_LICENSE.rtf" />
+
+      <Directory Id="TARGETDIR" Name="SourceDir">
+         <Directory Id="ProgramFilesFolder">
+            <Directory Id="SYNTAXICPRODUCTDIR" Name="Syntaxic">
+                <Component Id="ApplicationFiles" Guid="b0fea4dd-02bd-473e-931b-ceee56dcb51a">
+                    <File Id="syntaxic.exe" Source="WixSourceDir/syntaxic.exe"/>
+                    <File Source="WixSourceDir/Qt5Core.dll"/>
+                    <File Source="WixSourceDir/Qt5Gui.dll"/>
+                    <File Source="WixSourceDir/Qt5Widgets.dll"/>
+                    <File Source="WixSourceDir/Qt5Network.dll"/>
+                    <File Source="WixSourceDir/SYNTAXIC_HELP"/>
+                    <File Source="WixSourceDir/SYNTAXIC_LICENSE"/>
+                    <File Source="WixSourceDir/SYNTAXIC_WELCOME"/>
+                    <File Source="WixSourceDir/icudt53.dll"/>
+                    <File Source="WixSourceDir/icuin53.dll"/>
+                    <File Source="WixSourceDir/icuuc53.dll"/>
+                    <File Source="WixSourceDir/msvcp120.dll"/>
+                    <File Source="WixSourceDir/msvcr120.dll"/>
+                    <File Source="WixSourceDir/syntaxic_meta.json"/>
+                    <File Source="WixSourceDir/plink.exe"/>
+                </Component>
+
+                <Directory Id="languages" Name="languages">
+                    <Component Id="ApplicationFilesLanguages" Guid="21869913-4724-4d85-91b3-3e0ed0e774ba">
+                        <File Source="WixSourceDir\languages\bash.json" />
+                        <File Source="WixSourceDir\languages\clojure.json" />
+                        <File Source="WixSourceDir\languages\cmake.json" />
+                        <File Source="WixSourceDir\languages\coffeescript.json" />
+                        <File Source="WixSourceDir\languages\cpp.json" />
+                        <File Source="WixSourceDir\languages\cs.json" />
+                        <File Source="WixSourceDir\languages\css.json" />
+                        <File Source="WixSourceDir\languages\d.json" />
+                        <File Source="WixSourceDir\languages\dart.json" />
+                        <File Source="WixSourceDir\languages\delphi.json" />
+                        <File Source="WixSourceDir\languages\django.json" />
+                        <File Source="WixSourceDir\languages\dockerfile.json" />
+                        <File Source="WixSourceDir\languages\elixir.json" />
+                        <File Source="WixSourceDir\languages\erlang.json" />
+                        <File Source="WixSourceDir\languages\fsharp.json" />
+                        <File Source="WixSourceDir\languages\glsl.json" />
+                        <File Source="WixSourceDir\languages\go.json" />
+                        <File Source="WixSourceDir\languages\groovy.json" />
+                        <File Source="WixSourceDir\languages\haskell.json" />
+                        <File Source="WixSourceDir\languages\haxe.json" />
+                        <File Source="WixSourceDir\languages\html.json" />
+                        <File Source="WixSourceDir\languages\java.json" />
+                        <File Source="WixSourceDir\languages\javascript.json" />
+                        <File Source="WixSourceDir\languages\json.json" />
+                        <File Source="WixSourceDir\languages\julia.json" />
+                        <File Source="WixSourceDir\languages\less.json" />
+                        <File Source="WixSourceDir\languages\lisp.json" />
+                        <File Source="WixSourceDir\languages\lua.json" />
+                        <File Source="WixSourceDir\languages\makefile.json" />
+                        <File Source="WixSourceDir\languages\markdown.json" />
+                        <File Source="WixSourceDir\languages\mathematica.json" />
+                        <File Source="WixSourceDir\languages\matlab.json" />
+                        <File Source="WixSourceDir\languages\nginx.json" />
+                        <File Source="WixSourceDir\languages\nim.json" />
+                        <File Source="WixSourceDir\languages\objectivec.json" />
+                        <File Source="WixSourceDir\languages\ocaml.json" />
+                        <File Source="WixSourceDir\languages\perl.json" />
+                        <File Source="WixSourceDir\languages\php.json" />
+                        <File Source="WixSourceDir\languages\powershell.json" />
+                        <File Source="WixSourceDir\languages\processing.json" />
+                        <File Source="WixSourceDir\languages\protobuf.json" />
+                        <File Source="WixSourceDir\languages\puppet.json" />
+                        <File Source="WixSourceDir\languages\python.json" />
+                        <File Source="WixSourceDir\languages\r.json" />
+                        <File Source="WixSourceDir\languages\ruby.json" />
+                        <File Source="WixSourceDir\languages\rust.json" />
+                        <File Source="WixSourceDir\languages\scala.json" />
+                        <File Source="WixSourceDir\languages\scheme.json" />
+                        <File Source="WixSourceDir\languages\smalltalk.json" />
+                        <File Source="WixSourceDir\languages\sql.json" />
+                        <File Source="WixSourceDir\languages\swift.json" />
+                        <File Source="WixSourceDir\languages\tcl.json" />
+                        <File Source="WixSourceDir\languages\temp.json" />
+                        <File Source="WixSourceDir\languages\tex.json" />
+                        <File Source="WixSourceDir\languages\vbnet.json" />
+                        <File Source="WixSourceDir\languages\verilog.json" />
+                        <File Source="WixSourceDir\languages\vhdl.json" />
+                        <File Source="WixSourceDir\languages\x86asm.json" />
+                        <File Source="WixSourceDir\languages\xml.json" />
+                    </Component>
+                </Directory>
+
+                <Directory Id="platforms" Name="platforms">
+                    <Component Id="ApplicationFilesPlatforms" Guid="ad645972-0065-4f90-ae55-92465300299a">
+                        <File Source="WixSourceDir\platforms\qwindows.dll" />
+                    </Component>
+                </Directory>
+
+                <Directory Id="themes" Name="themes">
+                    <Component Id="ApplicationFilesThemes" Guid="9aa7dd30-fdfe-4653-a275-9aa29d3db4cf">
+                        <File Source="WixSourceDir\themes\Blue.json" />
+                        <File Source="WixSourceDir\themes\White.json" />
+                    </Component>
+                </Directory>
+            </Directory>
+         </Directory>
+
+         <Directory Id="ProgramMenuFolder">
+            <Directory Id="ApplicationProgramsFolder" Name="Syntaxic">
+                <Component Id="ApplicationStartMenu" Guid="697f45c4-5394-490a-98f1-631c57bfb316">
+                    <Shortcut Id="SyntaxicStartMenuShortcut"
+                              Name="Syntaxic"
+                              Description="Syntaxic Text Editor"
+                              Target="[#syntaxic.exe]"
+                              WorkingDirectory="APPLICATIONROOTDIRECTORY"/>
+                    <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+                    <RegistryValue Root="HKCU" Key="Software\Microsoft\Syntaxic" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                </Component>
+            </Directory>
+         </Directory>
+      </Directory>
+
+      <Property Id="WIXUI_INSTALLDIR" Value="SYNTAXICPRODUCTDIR" />
+
+      <Feature Id="DefaultFeature" Level="1">
+         <ComponentRef Id="ApplicationStartMenu" />
+         <ComponentRef Id="ApplicationFiles"/>
+         <ComponentRef Id="ApplicationFilesLanguages"/>
+         <ComponentRef Id="ApplicationFilesPlatforms"/>
+         <ComponentRef Id="ApplicationFilesThemes"/>
+      </Feature>
+      <UIRef Id="WixUI_InstallDir" />
+   </Product>
+</Wix>

@@ -1,0 +1,4 @@
+{
+   "filter" : "build *_pkg examples third-party test_files final_builds debugbuild",
+   "name" : "syntaxic"
+}

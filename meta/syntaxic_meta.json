@@ -320,6 +320,12 @@
     "*.tex"
   ]
 },
+"Typescript": {
+  "meta_file": "typescript",
+  "globs": [
+    "*.ts"
+  ]
+},
 "Vbnet": {
   "meta_file": "vbnet",
   "globs": [

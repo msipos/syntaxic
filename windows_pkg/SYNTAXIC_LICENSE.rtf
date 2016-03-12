@@ -1,0 +1,356 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\lang1033\f0\fs22 Syntaxic 0.9.3 (c) 2015 Maksim Sipos\par
+\par
+Problems, bugs, comments and feature requests?  Please report them to support@kpartite.com .\par
+\par
+DISCLAIMER:\par
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\par
+\par
+This program (hereinafter: Software) is copyrighted by Maksim Sipos.\par
+\par
+No-Distribution: No distribution of this Software, in binary or source form is allowed without explicit permission of the author.\par
+\par
+Support: Software is provided under an AS-IS basis and without any support, updates or maintenance. Nothing in this Agreement shall require Licensor to provide Licensee with support or fixes to any bug, failure, mis-performance or other defect in The Software.\par
+\par
+Liability:  To the extent permitted under Law, The Software is provided under an AS-IS basis. Licensor shall never, and without any limit, be liable for any damage, cost, expense or any other payment incurred by Licensee as a result of Software\'e2\'80\'99s actions, failure, bugs and/or any other interaction between The Software  and Licensee\'e2\'80\'99s end-equipment, computers, other software or any 3rd party, end-equipment, computer or services.  Moreover, Licensor shall never be liable for any defect in source code written by Licensee when relying on The Software or using The Software\'e2\'80\'99s source code.\par
+\par
+No-Warranty: The Software is provided without any warranty; Licensor hereby disclaims any warranty that The Software shall be error free, without defects or code which may cause damage to Licensee\'e2\'80\'99s computers or to Licensee, and that Software shall be functional. Licensee shall be solely liable to any damage, defect or loss incurred as a result of operating software and undertake the risks contained in running The Software on License\'e2\'80\'99s Server[s] and Website[s].\par
+\par
+This program uses the following third-party software in part or in whole, under the following licensing terms:\par
+\par
+  JsonCPP\par
+\par
+    Copyright (c) 2007-2010 Baptiste Lepilleur\par
+\par
+    Permission is hereby granted, free of charge, to any person\par
+    obtaining a copy of this software and associated documentation\par
+    files (the "Software"), to deal in the Software without\par
+    restriction, including without limitation the rights to use, copy,\par
+    modify, merge, publish, distribute, sublicense, and/or sell copies\par
+    of the Software, and to permit persons to whom the Software is\par
+    furnished to do so, subject to the following conditions:\par
+\par
+    The above copyright notice and this permission notice shall be\par
+    included in all copies or substantial portions of the Software.\par
+\par
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\par
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\par
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\par
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS\par
+    BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN\par
+    ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\par
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\par
+    SOFTWARE.\par
+\par
+  QT 5.4\par
+\par
+    The Qt Toolkit is Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies) and other contributors.\par
+    Contact: http://www.qt-project.org/legal\par
+\par
+                         GNU LESSER GENERAL PUBLIC LICENSE\par
+                           Version 3, 29 June 2007\par
+\par
+     Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>\par
+     Everyone is permitted to copy and distribute verbatim copies\par
+     of this license document, but changing it is not allowed.\par
+\par
+      This version of the GNU Lesser General Public License incorporates\par
+    the terms and conditions of version 3 of the GNU General Public\par
+    License, supplemented by the additional permissions listed below.\par
+\par
+      0. Additional Definitions.\par
+\par
+      As used herein, "this License" refers to version 3 of the GNU Lesser\par
+    General Public License, and the "GNU GPL" refers to version 3 of the GNU\par
+    General Public License.\par
+\par
+      "The Library" refers to a covered work governed by this License,\par
+    other than an Application or a Combined Work as defined below.\par
+\par
+      An "Application" is any work that makes use of an interface provided\par
+    by the Library, but which is not otherwise based on the Library.\par
+    Defining a subclass of a class defined by the Library is deemed a mode\par
+    of using an interface provided by the Library.\par
+\par
+      A "Combined Work" is a work produced by combining or linking an\par
+    Application with the Library.  The particular version of the Library\par
+    with which the Combined Work was made is also called the "Linked\par
+    Version".\par
+\par
+      The "Minimal Corresponding Source" for a Combined Work means the\par
+    Corresponding Source for the Combined Work, excluding any source code\par
+    for portions of the Combined Work that, considered in isolation, are\par
+    based on the Application, and not on the Linked Version.\par
+\par
+      The "Corresponding Application Code" for a Combined Work means the\par
+    object code and/or source code for the Application, including any data\par
+    and utility programs needed for reproducing the Combined Work from the\par
+    Application, but excluding the System Libraries of the Combined Work.\par
+\par
+      1. Exception to Section 3 of the GNU GPL.\par
+\par
+      You may convey a covered work under sections 3 and 4 of this License\par
+    without being bound by section 3 of the GNU GPL.\par
+\par
+      2. Conveying Modified Versions.\par
+\par
+      If you modify a copy of the Library, and, in your modifications, a\par
+    facility refers to a function or data to be supplied by an Application\par
+    that uses the facility (other than as an argument passed when the\par
+    facility is invoked), then you may convey a copy of the modified\par
+    version:\par
+\par
+       a) under this License, provided that you make a good faith effort to\par
+       ensure that, in the event an Application does not supply the\par
+       function or data, the facility still operates, and performs\par
+       whatever part of its purpose remains meaningful, or\par
+\par
+       b) under the GNU GPL, with none of the additional permissions of\par
+       this License applicable to that copy.\par
+\par
+      3. Object Code Incorporating Material from Library Header Files.\par
+\par
+      The object code form of an Application may incorporate material from\par
+    a header file that is part of the Library.  You may convey such object\par
+    code under terms of your choice, provided that, if the incorporated\par
+    material is not limited to numerical parameters, data structure\par
+    layouts and accessors, or small macros, inline functions and templates\par
+    (ten or fewer lines in length), you do both of the following:\par
+\par
+       a) Give prominent notice with each copy of the object code that the\par
+       Library is used in it and that the Library and its use are\par
+       covered by this License.\par
+\par
+       b) Accompany the object code with a copy of the GNU GPL and this license\par
+       document.\par
+\par
+      4. Combined Works.\par
+\par
+      You may convey a Combined Work under terms of your choice that,\par
+    taken together, effectively do not restrict modification of the\par
+    portions of the Library contained in the Combined Work and reverse\par
+    engineering for debugging such modifications, if you also do each of\par
+    the following:\par
+\par
+       a) Give prominent notice with each copy of the Combined Work that\par
+       the Library is used in it and that the Library and its use are\par
+       covered by this License.\par
+\par
+       b) Accompany the Combined Work with a copy of the GNU GPL and this license\par
+       document.\par
+\par
+       c) For a Combined Work that displays copyright notices during\par
+       execution, include the copyright notice for the Library among\par
+       these notices, as well as a reference directing the user to the\par
+       copies of the GNU GPL and this license document.\par
+\par
+       d) Do one of the following:\par
+\par
+           0) Convey the Minimal Corresponding Source under the terms of this\par
+           License, and the Corresponding Application Code in a form\par
+           suitable for, and under terms that permit, the user to\par
+           recombine or relink the Application with a modified version of\par
+           the Linked Version to produce a modified Combined Work, in the\par
+           manner specified by section 6 of the GNU GPL for conveying\par
+           Corresponding Source.\par
+\par
+           1) Use a suitable shared library mechanism for linking with the\par
+           Library.  A suitable mechanism is one that (a) uses at run time\par
+           a copy of the Library already present on the user's computer\par
+           system, and (b) will operate properly with a modified version\par
+           of the Library that is interface-compatible with the Linked\par
+           Version.\par
+\par
+       e) Provide Installation Information, but only if you would otherwise\par
+       be required to provide such information under section 6 of the\par
+       GNU GPL, and only to the extent that such information is\par
+       necessary to install and execute a modified version of the\par
+       Combined Work produced by recombining or relinking the\par
+       Application with a modified version of the Linked Version. (If\par
+       you use option 4d0, the Installation Information must accompany\par
+       the Minimal Corresponding Source and Corresponding Application\par
+       Code. If you use option 4d1, you must provide the Installation\par
+       Information in the manner specified by section 6 of the GNU GPL\par
+       for conveying Corresponding Source.)\par
+\par
+      5. Combined Libraries.\par
+\par
+      You may place library facilities that are a work based on the\par
+    Library side by side in a single library together with other library\par
+    facilities that are not Applications and are not covered by this\par
+    License, and convey such a combined library under terms of your\par
+    choice, if you do both of the following:\par
+\par
+       a) Accompany the combined library with a copy of the same work based\par
+       on the Library, uncombined with any other library facilities,\par
+       conveyed under the terms of this License.\par
+\par
+       b) Give prominent notice with the combined library that part of it\par
+       is a work based on the Library, and explaining where to find the\par
+       accompanying uncombined form of the same work.\par
+\par
+      6. Revised Versions of the GNU Lesser General Public License.\par
+\par
+      The Free Software Foundation may publish revised and/or new versions\par
+    of the GNU Lesser General Public License from time to time. Such new\par
+    versions will be similar in spirit to the present version, but may\par
+    differ in detail to address new problems or concerns.\par
+\par
+      Each version is given a distinguishing version number. If the\par
+    Library as you received it specifies that a certain numbered version\par
+    of the GNU Lesser General Public License "or any later version"\par
+    applies to it, you have the option of following the terms and\par
+    conditions either of that published version or of any later version\par
+    published by the Free Software Foundation. If the Library as you\par
+    received it does not specify a version number of the GNU Lesser\par
+    General Public License, you may choose any version of the GNU Lesser\par
+    General Public License ever published by the Free Software Foundation.\par
+\par
+      If the Library as you received it specifies that a proxy can decide\par
+    whether future versions of the GNU Lesser General Public License shall\par
+    apply, that proxy's public statement of acceptance of any version is\par
+    permanent authorization for you to choose that version for the\par
+    Library.\par
+\par
+    Digia Qt LGPL Exception version 1.1\par
+\par
+    As an additional permission to the GNU Lesser General Public License version\par
+    2.1, the object code form of a "work that uses the Library" may incorporate\par
+    material from a header file that is part of the Library.  You may distribute\par
+    such object code under terms of your choice, provided that:\par
+      (i)   the header files of the Library have not been modified; and\par
+      (ii)  the incorporated material is limited to numerical parameters, data\par
+            structure layouts, accessors, macros, inline functions and\par
+            templates; and\par
+      (iii) you comply with the terms of Section 6 of the GNU Lesser General\par
+            Public License version 2.1.\par
+\par
+    Moreover, you may apply this exception to a modified version of the Library,\par
+    provided that such modification does not involve copying material from the\par
+    Library into the modified Library's header files unless such material is\par
+    limited to (i) numerical parameters; (ii) data structure layouts;\par
+    (iii) accessors; and (iv) small macros, templates and inline functions of\par
+    five lines or less in length.\par
+\par
+    Furthermore, you are not required to apply this additional permission to a\par
+    modified version of the Library.\par
+\par
+  RE2\par
+\par
+    Copyright (c) 2009 The RE2 Authors. All rights reserved.\par
+\par
+    Redistribution and use in source and binary forms, with or without\par
+    modification, are permitted provided that the following conditions are\par
+    met:\par
+\par
+      * Redistributions of source code must retain the above copyright\par
+    notice, this list of conditions and the following disclaimer.\par
+      * Redistributions in binary form must reproduce the above\par
+    copyright notice, this list of conditions and the following disclaimer\par
+    in the documentation and/or other materials provided with the\par
+    distribution.\par
+      * Neither the name of Google Inc. nor the names of its\par
+    contributors may be used to endorse or promote products derived from\par
+    this software without specific prior written permission.\par
+\par
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\par
+    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\par
+    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\par
+    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\par
+    OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\par
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\par
+    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\par
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\par
+    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\par
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\par
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\par
+\par
+  QDarkStyleSheet\par
+\par
+    The MIT License (MIT)\par
+    Copyright (c) <2013-2014> <Colin Duquesnoy>\par
+\par
+    Permission is hereby granted, free of charge, to any person obtaining a copy\par
+    of this software and associated documentation files (the "Software"), to deal\par
+    in the Software without restriction, including without limitation the rights\par
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\par
+    copies of the Software, and to permit persons to whom the Software is\par
+    furnished to do so, subject to the following conditions:\par
+\par
+    The above copyright notice and this permission notice shall be included in\par
+    all copies or substantial portions of the Software.\par
+\par
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\par
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\par
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\par
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\par
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\par
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\par
+    THE SOFTWARE.\par
+\par
+  Duktape\par
+\par
+    (http://opensource.org/licenses/MIT)\par
+    Copyright (c) 2013-2015 by Duktape authors (see AUTHORS.rst)\par
+\par
+    Permission is hereby granted, free of charge, to any person obtaining a copy\par
+    of this software and associated documentation files (the "Software"), to deal\par
+    in the Software without restriction, including without limitation the rights\par
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\par
+    copies of the Software, and to permit persons to whom the Software is\par
+    furnished to do so, subject to the following conditions:\par
+\par
+    The above copyright notice and this permission notice shall be included in\par
+    all copies or substantial portions of the Software.\par
+\par
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\par
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\par
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\par
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\par
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\par
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\par
+    THE SOFTWARE.\par
+\par
+  Syntax definition files and theme files for Syntaxic were based from highlight.js:\par
+\par
+    Highlight.Js\par
+\par
+    Copyright (c) 2006, Ivan Sagalaev\par
+    All rights reserved.\par
+    Redistribution and use in source and binary forms, with or without\par
+    modification, are permitted provided that the following conditions are met:\par
+\par
+        * Redistributions of source code must retain the above copyright\par
+          notice, this list of conditions and the following disclaimer.\par
+        * Redistributions in binary form must reproduce the above copyright\par
+          notice, this list of conditions and the following disclaimer in the\par
+          documentation and/or other materials provided with the distribution.\par
+        * Neither the name of highlight.js nor the names of its contributors\par
+          may be used to endorse or promote products derived from this software\par
+          without specific prior written permission.\par
+\par
+    THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND ANY\par
+    EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\par
+    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\par
+    DISCLAIMED. IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY\par
+    DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\par
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\par
+    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\par
+    ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\par
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\par
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\par
+\par
+\par
+  plink.exe\par
+\par
+    PuTTY is copyright 1997-2015 Simon Tatham.\par
+\par
+Portions copyright Robert de Bath, Joris van Rantwijk, Delian Delchev, Andreas Schultz, Jeroen Massar, Wez Furlong, Nicolas Barry, Justin Bradford, Ben Harris, Malcolm Smith, Ahmad Khalifa, Markus Kuhn, Colin Watson, Christopher Staite, and CORE SDI S.A.\par
+\par
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\par
+\par
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\par
+\par
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL SIMON TATHAM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\par
+}
+ 
